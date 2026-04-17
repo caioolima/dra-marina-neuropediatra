@@ -797,10 +797,12 @@ function Contact() {
                 <p className="text-base leading-relaxed text-brand-text/70">
                   Rua Tenente Ary Tarragô, 267
                   <br />
-                  Porto Alegre - RS
+                  Jardim Sabará, Porto Alegre - RS
+                  <br />
+                  CEP 91225-000
                 </p>
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Clínica+Cuidado+Integral+Rua+Tenente+Ary+Tarragô+267+Porto+Alegre" 
+                  href="https://www.google.com/maps/search/?api=1&query=Rua+Tenente+Ary+Tarragô+267+Jardim+Sabará+Porto+Alegre+RS+91225-000" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-secondary hover:underline"
