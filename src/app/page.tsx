@@ -450,9 +450,10 @@ function Hero() {
                   Neuropediatra
                 </p>
               </div>
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
     <div className="section-wave-bottom" />
   </header>
