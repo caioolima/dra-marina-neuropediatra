@@ -400,33 +400,39 @@ function Hero() {
           </div>
 
           <div className="hero-credentials-card mt-12 -mx-5 w-[calc(100%+2.5rem)] md:mx-0 md:w-full max-w-3xl lg:max-w-none">
-            <div className="flex flex-col gap-8 rounded-none border-x-0 border-y border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md md:flex-row md:items-center md:justify-around md:gap-4 md:rounded-[2.4rem] md:border">
-              <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">CRM</p>
-                <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
-                  57561-RS <span className="mx-1 opacity-20">|</span> 15077-PA
-                </p>
-                <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Registro profissional</p>
+            <div className="flex flex-col gap-10 rounded-none border-x-0 border-y border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md md:flex-row md:items-stretch md:justify-around md:gap-8 md:rounded-[2.4rem] md:border">
+              {/* Column 1: Credentials */}
+              <div className="flex flex-1 flex-col justify-center gap-8">
+                <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">CRM</p>
+                  <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
+                    57561-RS <span className="mx-1 opacity-20">|</span> 15077-PA
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Registro profissional</p>
+                </div>
+
+                <div className="h-px w-full bg-brand-text/5 md:w-3/4" />
+
+                <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">RQE</p>
+                  <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
+                    44491-RS <span className="mx-1 opacity-20">|</span> 10788-PA
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Título de especialista</p>
+                </div>
               </div>
               
-              <div className="hidden h-10 w-px bg-brand-text/10 md:block" />
+              <div className="hidden w-px bg-brand-text/10 md:block" />
 
-              <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">RQE</p>
-                <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
-                  44491-RS <span className="mx-1 opacity-20">|</span> 10788-PA
-                </p>
-                <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Título de especialista</p>
-              </div>
-
-              <div className="hidden h-10 w-px bg-brand-text/10 md:block" />
-
-              <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco</p>
-                <p className="text-lg font-bold leading-tight text-brand-text lg:text-xl">
+              {/* Column 2: Focus */}
+              <div className="flex flex-1 flex-col items-center justify-center text-center md:items-start md:text-left">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco de Atuação</p>
+                <h3 className="mt-2 font-display text-2xl font-bold leading-tight text-brand-text lg:text-3xl">
                   Autismo, TDAH e Epilepsia
+                </h3>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-brand-text/50 italic">
+                  Neurologia Infantil e Neurodesenvolvimento
                 </p>
-                <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Neurologia Infantil</p>
               </div>
             </div>
           </div>
@@ -733,7 +739,7 @@ function Contact() {
   return (
     <section id="atendimento" className="overflow-hidden border-t border-brand-text/5">
       {/* Top Part: Brown CTA Area */}
-      <div className="bg-[#765d63] py-24 text-white md:py-36">
+      <div className="bg-[#765d63] py-16 text-white md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="flex flex-col items-center">
             <motion.div {...fadeUp} className="text-center">
@@ -741,17 +747,17 @@ function Contact() {
                 Agendamento
               </span>
               
-              <h2 className="mt-8 mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl text-white">
+              <h2 className="mt-6 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-white">
                 Pronto para iniciar uma jornada de cuidado especializado?
               </h2>
 
-              <div className="mt-10 mx-auto max-w-2xl">
-                <p className="border-t border-white/10 pt-8 text-xl font-medium leading-relaxed text-white/80 md:text-2xl">
+              <div className="mt-8 mx-auto max-w-2xl">
+                <p className="border-t border-white/10 pt-6 text-lg font-medium leading-relaxed text-white/80 md:text-xl">
                   O cuidado que o desenvolvimento do seu filho merece, com acolhimento e precisão.
                 </p>
               </div>
 
-              <div className="mt-14">
+              <div className="mt-10">
                 <a
                   href={whatsappHref}
                   className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-10 py-5 text-base font-bold text-[#765d63] transition-all hover:scale-105 hover:bg-brand-primary hover:text-white shadow-xl"
@@ -759,7 +765,7 @@ function Contact() {
                   <span className="relative z-10">Agendar consulta por WhatsApp</span>
                   <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
-                <p className="mt-6 text-xs font-medium uppercase tracking-widest text-white/40">
+                <p className="mt-4 text-xs font-medium uppercase tracking-widest text-white/40">
                   Resposta rápida via WhatsApp
                 </p>
               </div>
@@ -856,7 +862,7 @@ function Contact() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-text/40">Contato Central</p>
                 <a 
                   href={whatsappHref}
-                  className="mt-3 block text-2xl font-bold text-brand-text transition-colors hover:text-brand-primary md:text-3xl"
+                  className="mt-3 block whitespace-nowrap text-xl font-bold text-brand-text transition-colors hover:text-brand-primary md:text-2xl"
                 >
                   (91) 92004-9746
                 </a>
