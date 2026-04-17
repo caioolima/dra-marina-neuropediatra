@@ -360,7 +360,7 @@ function Hero() {
             Dra. Marina Keuffer
           </p>
 
-          <h1 className="max-w-2xl font-display text-4xl font-bold leading-[1.02] text-brand-text md:text-5xl">
+          <h1 className="max-w-2xl font-display text-3xl font-bold leading-[1.08] text-brand-text md:text-4xl lg:text-5xl">
             Cuidado especializado para o desenvolvimento do seu filho.
           </h1>
 
