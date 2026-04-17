@@ -399,28 +399,34 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hero-credentials-card mt-12 w-full max-w-2xl lg:max-w-none">
-            <div className="flex flex-col gap-8 rounded-[2.4rem] border border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md md:flex-row md:items-start md:justify-between md:gap-10">
-              <div className="flex-1 space-y-2.5">
+          <div className="hero-credentials-card mt-12 -mx-5 w-[calc(100%+2.5rem)] md:mx-0 md:w-full max-w-3xl lg:max-w-none">
+            <div className="flex flex-col gap-8 rounded-none border-x-0 border-y border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md md:flex-row md:items-center md:justify-around md:gap-4 md:rounded-[2.4rem] md:border">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">CRM</p>
-                <p className="text-lg font-bold leading-tight text-brand-text md:text-xl">57561-RS | 15077-PA</p>
-                <p className="text-xs font-medium text-brand-text/50 lowercase italic">Registro profissional</p>
+                <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
+                  57561-RS <span className="mx-1 opacity-20">|</span> 15077-PA
+                </p>
+                <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Registro profissional</p>
               </div>
               
-              <div className="hidden h-12 w-px bg-brand-text/5 md:block self-center" />
+              <div className="hidden h-10 w-px bg-brand-text/10 md:block" />
 
-              <div className="flex-1 space-y-2.5">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">RQE</p>
-                <p className="text-lg font-bold leading-tight text-brand-text md:text-xl">44491-RS | 10788-PA</p>
-                <p className="text-xs font-medium text-brand-text/50 lowercase italic">Título de especialista</p>
+                <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
+                  44491-RS <span className="mx-1 opacity-20">|</span> 10788-PA
+                </p>
+                <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Título de especialista</p>
               </div>
 
-              <div className="hidden h-12 w-px bg-brand-text/5 md:block self-center" />
+              <div className="hidden h-10 w-px bg-brand-text/10 md:block" />
 
-              <div className="flex-1 space-y-2.5">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco</p>
-                <p className="text-lg font-bold leading-tight text-brand-text md:text-xl">Autismo, TDAH e Epilepsia</p>
-                <p className="text-xs font-medium text-brand-text/50 lowercase italic">Neurologia Infantil</p>
+                <p className="text-lg font-bold leading-tight text-brand-text lg:text-xl">
+                  Autismo, TDAH e Epilepsia
+                </p>
+                <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Neurologia Infantil</p>
               </div>
             </div>
           </div>
