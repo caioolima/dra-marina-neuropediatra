@@ -556,11 +556,11 @@ function Specialties() {
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
               Especialidades
             </span>
-            <h2 className="mt-8 mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-6xl lg:text-7xl">
+            <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
               Principais quadros avaliados no consultório.
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
-              <p className="border-t border-brand-text/10 pt-8 text-lg font-medium leading-relaxed text-brand-text/60 md:text-xl">
+              <p className="border-t border-brand-text/10 pt-8 text-base font-medium leading-relaxed text-brand-text/60">
                 Uma investigação criteriosa para entender sinais, orientar a família e definir os próximos passos com segurança.
               </p>
             </div>
