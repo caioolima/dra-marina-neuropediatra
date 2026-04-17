@@ -348,7 +348,6 @@ function Hero() {
       <SunAccent className="absolute -left-12 -top-12 scale-75 opacity-95 transition-transform duration-[10000ms] hover:scale-90 md:left-[5%] md:top-0 md:scale-100 z-0" />
       <CloudCluster className="absolute left-[30%] -top-4 scale-50 opacity-80 md:left-10 md:top-8 md:scale-100 z-0" />
       <CloudCluster className="absolute right-12 top-10 hidden opacity-70 lg:block z-0" />
-      <TeddyAccent className="absolute right-[42%] bottom-14 hidden lg:block z-0" />
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-48 lg:pt-56">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <motion.div
@@ -400,22 +399,28 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hero-credentials-card mt-10">
-            <div className="hero-credentials-grid">
-              <div className="hero-credential-item">
-                <p className="hero-info-label">CRM</p>
-                <p className="hero-info-value">57561-RS | 15077-PA</p>
-                <p className="hero-info-text">Registro profissional</p>
+          <div className="hero-credentials-card mt-12 w-full max-w-2xl lg:max-w-none">
+            <div className="flex flex-col gap-8 rounded-[2.4rem] border border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md md:flex-row md:items-start md:justify-between md:gap-10">
+              <div className="flex-1 space-y-2.5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">CRM</p>
+                <p className="text-lg font-bold leading-tight text-brand-text md:text-xl">57561-RS | 15077-PA</p>
+                <p className="text-xs font-medium text-brand-text/50 lowercase italic">Registro profissional</p>
               </div>
-              <div className="hero-credential-item">
-                <p className="hero-info-label">RQE</p>
-                <p className="hero-info-value">44491-RS | 10788-PA</p>
-                <p className="hero-info-text">Título de especialista</p>
+              
+              <div className="hidden h-12 w-px bg-brand-text/5 md:block self-center" />
+
+              <div className="flex-1 space-y-2.5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">RQE</p>
+                <p className="text-lg font-bold leading-tight text-brand-text md:text-xl">44491-RS | 10788-PA</p>
+                <p className="text-xs font-medium text-brand-text/50 lowercase italic">Título de especialista</p>
               </div>
-              <div className="hero-credential-item">
-                <p className="hero-info-label">Foco</p>
-                <p className="hero-info-value">Autismo, TDAH e Epilepsia</p>
-                <p className="hero-info-text">Neurologia Infantil</p>
+
+              <div className="hidden h-12 w-px bg-brand-text/5 md:block self-center" />
+
+              <div className="flex-1 space-y-2.5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco</p>
+                <p className="text-lg font-bold leading-tight text-brand-text md:text-xl">Autismo, TDAH e Epilepsia</p>
+                <p className="text-xs font-medium text-brand-text/50 lowercase italic">Neurologia Infantil</p>
               </div>
             </div>
           </div>
