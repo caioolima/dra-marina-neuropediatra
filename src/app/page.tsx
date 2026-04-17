@@ -427,10 +427,10 @@ function Hero() {
               {/* Column 2: Focus */}
               <div className="flex flex-1 flex-col items-center justify-center text-center md:items-start md:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco de Atuação</p>
-                <h3 className="mt-2 font-display text-2xl font-bold leading-tight text-brand-text lg:text-3xl">
+                <h3 className="mt-2 font-display text-lg font-bold leading-tight text-brand-text md:text-xl">
                   Autismo, TDAH e Epilepsia
                 </h3>
-                <p className="mt-3 text-sm font-medium leading-relaxed text-brand-text/50 italic">
+                <p className="mt-2 text-xs font-medium leading-relaxed text-brand-text/50 italic">
                   Neurologia Infantil e Neurodesenvolvimento
                 </p>
               </div>
@@ -747,7 +747,7 @@ function Contact() {
                 Agendamento
               </span>
               
-              <h2 className="mt-6 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-white">
+              <h2 className="mt-6 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight md:text-4xl lg:text-5xl text-white">
                 Pronto para iniciar uma jornada de cuidado especializado?
               </h2>
 
