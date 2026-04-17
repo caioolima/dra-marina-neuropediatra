@@ -761,16 +761,16 @@ function Contact() {
       <div className="bg-[#fdfafb] py-24 text-brand-text md:py-32">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid gap-x-12 gap-y-16 lg:grid-cols-12 lg:items-start">
-            {/* Porto Alegre Column */}
-            <motion.div {...fadeUp} className="lg:col-span-4">
+            {/* Porto Alegre 1 Column */}
+            <motion.div {...fadeUp} className="lg:col-span-3">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-secondary">
                 Porto Alegre - RS
               </span>
-              <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-brand-text md:text-4xl">
+              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight text-brand-text md:text-3xl">
                 Clínica Cuidado Integral
               </h3>
               <div className="mt-6 flex flex-col gap-2">
-                <p className="text-lg leading-relaxed text-brand-text/70">
+                <p className="text-base leading-relaxed text-brand-text/70">
                   Rua Tenente Ary Tarragô, 267
                   <br />
                   Porto Alegre - RS
@@ -782,21 +782,47 @@ function Contact() {
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-secondary hover:underline"
                 >
                   <MapPin className="h-4 w-4" />
-                  Ver no Google Maps
+                  Ver no Maps
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Porto Alegre 2 Column (Prontokids) */}
+            <motion.div {...fadeUp} className="lg:col-span-3">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-primary">
+                Porto Alegre - RS
+              </span>
+              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight text-brand-text md:text-3xl">
+                Prontokids
+              </h3>
+              <div className="mt-6 flex flex-col gap-2">
+                <p className="text-base leading-relaxed text-brand-text/70">
+                  Viva Open Mall
+                  <br />
+                  Av. Dr. Nilo Peçanha, 3228
+                </p>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Prontokids+Viva+Open+Mall+Av.+Dr.+Nilo+Peçanha+3228+Porto+Alegre" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-primary hover:underline"
+                >
+                  <MapPin className="h-4 w-4" />
+                  Ver no Maps
                 </a>
               </div>
             </motion.div>
 
             {/* Belém Column */}
-            <motion.div {...fadeUp} className="lg:col-span-4">
+            <motion.div {...fadeUp} className="lg:col-span-3">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-lilac">
                 Belém - PA
               </span>
-              <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-brand-text md:text-4xl">
+              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight text-brand-text md:text-3xl">
                 Umarizal
               </h3>
               <div className="mt-6 flex flex-col gap-2">
-                <p className="text-lg leading-relaxed text-brand-text/70">
+                <p className="text-base leading-relaxed text-brand-text/70">
                   Tv. Dom Romualdo de Seixas, 1698
                   <br />
                   Belém - PA, 66055-200
@@ -808,13 +834,13 @@ function Contact() {
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-lilac hover:underline"
                 >
                   <MapPin className="h-4 w-4" />
-                  Ver no Google Maps
+                  Ver no Maps
                 </a>
               </div>
             </motion.div>
 
             {/* Contact & Hours Info */}
-            <motion.div {...fadeUp} className="flex flex-col gap-10 border-t border-brand-text/10 pt-12 lg:col-span-4 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0">
+            <motion.div {...fadeUp} className="flex flex-col gap-10 border-t border-brand-text/10 pt-12 lg:col-span-3 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-text/40">Contato Central</p>
                 <a 
