@@ -622,7 +622,7 @@ function Specialties() {
 
 function About() {
   return (
-    <section id="sobre" className="relative overflow-hidden px-5 py-18 md:px-8 md:py-24">
+    <section id="sobre" className="relative overflow-hidden px-5 py-16 md:px-8 md:py-24">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <BalloonAccent className="absolute left-[8%] top-10 hidden lg:flex" fillColor="#a5d5dd" />
         <CloudCluster className="absolute right-[12%] top-20 hidden opacity-70 xl:block" />
@@ -826,9 +826,13 @@ function Contact() {
                   Viva Open Mall
                   <br />
                   Av. Dr. Nilo Peçanha, 3228
+                  <br />
+                  Jardim Europa, Porto Alegre - RS
+                  <br />
+                  CEP 91360-480
                 </p>
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=ProntoKids+Viva+Open+Mall+Av.+Dr.+Nilo+Peçanha+3228+Porto+Alegre" 
+                  href="https://www.google.com/maps/search/?api=1&query=Av.+Dr.+Nilo+Peçanha+3228+Jardim+Europa+Porto+Alegre+RS+91360-480" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-primary hover:underline"
@@ -851,10 +855,12 @@ function Contact() {
                 <p className="text-base leading-relaxed text-brand-text/70">
                   Tv. Dom Romualdo de Seixas, 1698
                   <br />
-                  Belém - PA, 66055-200
+                  Umarizal, Belém - PA
+                  <br />
+                  CEP 66055-200
                 </p>
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Tv.+Dom+Romualdo+de+Seixas+1698+Belém" 
+                  href="https://www.google.com/maps/search/?api=1&query=Tv.+Dom+Romualdo+de+Seixas+1698+Umarizal+Belém+PA+66055-200" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-lilac hover:underline"
