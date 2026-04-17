@@ -344,18 +344,19 @@ function Navbar() {
 
 function Hero() {
   return (
-    <header id="inicio" className="relative overflow-hidden bg-[linear-gradient(180deg,#d4eff4_0%,#ffffff_35%)]">
-      <SunAccent className="absolute -left-8 top-[-2%] scale-75 opacity-95 transition-transform duration-[10000ms] hover:scale-90 md:left-[5%] md:top-12 md:scale-100 z-0" />
-      <CloudCluster className="absolute left-[30%] top-8 scale-50 opacity-80 md:left-10 md:top-24 md:scale-100 z-0" />
-      <CloudCluster className="absolute right-12 top-40 hidden opacity-70 lg:block z-0" />
+    <header id="inicio" className="relative overflow-hidden bg-[linear-gradient(180deg,#d4eff4_0%,#ffffff_45%)]">
+      <SunAccent className="absolute -left-12 -top-12 scale-75 opacity-95 transition-transform duration-[10000ms] hover:scale-90 md:left-[5%] md:top-0 md:scale-100 z-0" />
+      <CloudCluster className="absolute left-[30%] -top-4 scale-50 opacity-80 md:left-10 md:top-8 md:scale-100 z-0" />
+      <CloudCluster className="absolute right-12 top-10 hidden opacity-70 lg:block z-0" />
       <TeddyAccent className="absolute right-[42%] bottom-14 hidden lg:block z-0" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-18 pt-28 md:px-8 md:pb-24 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12 lg:pt-14">
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative z-10"
-        >
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-48 lg:pt-56">
+        <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center text-center lg:items-start lg:text-left"
+          >
           <p className="mb-3 text-lg font-semibold text-brand-primary md:text-xl">
             Dra. Marina Keuffer
           </p>

@@ -13,7 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dramarinakeuffer.com.br"),
+  metadataBase: new URL("https://dra-marina-neuropediatra.vercel.app"),
   title: "Dra. Marina Keuffer | Neuropediatra | Porto Alegre e Belém",
   description: "Especialista em neurologia infantil em Porto Alegre (RS) e Belém (PA). Foco em autismo, TDAH e atrasos de desenvolvimento. CRM 57561-RS | RQE 44491.",
   keywords: ["neuropediatra", "neurologia infantil", "porto alegre", "belém", "autismo", "tdah", "atraso de fala", "desenvolvimento infantil"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dra. Marina Keuffer | Neuropediatra",
     description: "Cuidado especializado no neurodesenvolvimento infantil em Porto Alegre e Belém.",
-    url: "https://dramarinakeuffer.com.br",
+    url: "https://dra-marina-neuropediatra.vercel.app",
     siteName: "Dra. Marina Keuffer Neuropediatria",
     images: [
       {
@@ -33,6 +33,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Dra. Marina Keuffer - Neuropediatra",
       },
+      {
+        url: "/simbolo-marina.png",
+        width: 400,
+        height: 400,
+        alt: "Logo Dra. Marina Keuffer",
+      }
     ],
     locale: "pt_BR",
     type: "website",
@@ -43,6 +49,11 @@ export const metadata: Metadata = {
     description: "Cuidado especializado no neurodesenvolvimento infantil em Porto Alegre e Belém.",
     images: ["/marina-keuffer-sobre.jpeg"],
   },
+  other: {
+    "itemprop:name": "Dra. Marina Keuffer | Neuropediatra",
+    "itemprop:description": "Cuidado especializado no neurodesenvolvimento infantil em Porto Alegre e Belém.",
+    "itemprop:image": "https://dra-marina-neuropediatra.vercel.app/marina-keuffer-sobre.jpeg",
+  }
 };
 
 export default function RootLayout({
@@ -56,8 +67,8 @@ export default function RootLayout({
     "name": "Dra. Marina Keuffer - Neuropediatra",
     "description": "Especialista em neurologia infantil em Porto Alegre e Belém.",
     "telephone": "+5591920049746",
-    "url": "https://dramarinakeuffer.com.br",
-    "logo": "https://dramarinakeuffer.com.br/simbolo-marina.png",
+    "url": "https://dra-marina-neuropediatra.vercel.app",
+    "logo": "https://dra-marina-neuropediatra.vercel.app/simbolo-marina.png",
     "medicalSpecialty": "PediatricNeurology",
     "aggregateRating": {
       "@type": "AggregateRating",
