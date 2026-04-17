@@ -310,10 +310,10 @@ function Navbar() {
             />
           </div>
           <div className="leading-tight">
-            <p className="font-display text-lg font-semibold text-brand-primary">
+            <p className="whitespace-nowrap font-display text-sm font-semibold text-brand-primary md:text-base">
               Dra. Marina Keuffer
             </p>
-            <p className="text-xs uppercase tracking-[0.28em] text-brand-text/60">
+            <p className="text-[9px] uppercase tracking-[0.22em] text-brand-text/60 md:text-xs md:tracking-[0.28em]">
               Neuropediatra
             </p>
           </div>
