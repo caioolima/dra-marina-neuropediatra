@@ -19,16 +19,16 @@ import {
 const whatsappHref = 'https://wa.me/5591920049746';
 
 const fadeUp = {
-  initial: { opacity: 0, y: 28 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.2 },
-  transition: { duration: 0.65 },
-};
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const },
+} as const;
 
 const cardVariants = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-};
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+} as const;
 
 const journeyItems = [
   {
@@ -579,10 +579,10 @@ function Specialties() {
             return (
               <motion.article
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
                 className={`group relative flex flex-col justify-between overflow-hidden rounded-[3rem] border-[6px] border-white ${item.tone} p-8 shadow-[0_20px_50px_rgba(118,93,99,0.08)] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_24px_50px_rgba(118,93,99,0.12)] md:p-10 ${isEven ? 'lg:-translate-y-8' : 'lg:translate-y-8'}`}
                 style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
               >
