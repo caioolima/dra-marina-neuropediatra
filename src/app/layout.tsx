@@ -89,7 +89,19 @@ export default function RootLayout({
       },
       {
         "@type": "MedicalClinic",
-        "name": "Consultório Belém",
+        "name": "Prontokids - Viva Open Mall (Porto Alegre)",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Dr. Nilo Peçanha, 3228",
+          "addressLocality": "Porto Alegre",
+          "addressRegion": "RS",
+          "addressCountry": "BR",
+          "postalCode": "91360-480"
+        }
+      },
+      {
+        "@type": "MedicalClinic",
+        "name": "Consultório Belém (Umarizal)",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Tv. Dom Romualdo de Seixas, 1698",

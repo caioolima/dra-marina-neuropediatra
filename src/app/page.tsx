@@ -141,19 +141,19 @@ const specialties = [
     Illustration: TeddyGraphic,
   },
   {
-    eyebrow: 'Neurologia infantil',
-    title: 'Sintomas e seguimento',
+    eyebrow: 'Neurologia clínica',
+    title: 'Epilepsia e crises',
     description:
-      'Acompanhamento de sintomas neurológicos e definição de conduta clínica individualizada.',
-    tone: 'bg-brand-sage/35',
+      'Diagnóstico de crises convulsivas e manejo clínico individualizado de síndromes epiléticas.',
+    tone: 'bg-brand-secondary/35',
     Illustration: PinwheelGraphic,
   },
 ];
 
 const trustItems = [
   'Formação pelo CESUPA',
-  'Residência em Pediatria',
-  'Especialização pela UFCSPA',
+  'Residência em Pediatria (FSCMPA)',
+  'Residência em Neurologia Pediátrica (Santa Casa POA)',
   'Atuação em Porto Alegre e Belém',
 ];
 
@@ -350,14 +350,14 @@ function Hero() {
       <CloudCluster className="absolute right-12 top-10 hidden opacity-70 lg:block z-0" />
       <TeddyAccent className="absolute right-[42%] bottom-14 hidden lg:block z-0" />
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-48 lg:pt-56">
-        <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center text-center lg:items-start lg:text-left"
           >
-          <p className="mb-3 text-lg font-semibold text-brand-primary md:text-xl">
+          <p className="mb-3 text-base font-semibold text-brand-primary md:text-lg">
             Dra. Marina Keuffer
           </p>
 
@@ -404,18 +404,18 @@ function Hero() {
             <div className="hero-credentials-grid">
               <div className="hero-credential-item">
                 <p className="hero-info-label">CRM</p>
-                <p className="hero-info-value">CRM 57561-RS</p>
+                <p className="hero-info-value">57561-RS | 15077-PA</p>
                 <p className="hero-info-text">Registro profissional</p>
               </div>
               <div className="hero-credential-item">
                 <p className="hero-info-label">RQE</p>
-                <p className="hero-info-value">RQE 44491</p>
+                <p className="hero-info-value">44491-RS | 10788-PA</p>
                 <p className="hero-info-text">Título de especialista</p>
               </div>
               <div className="hero-credential-item">
-                <p className="hero-info-label">Atendimento</p>
-                <p className="hero-info-value">Porto Alegre e Belém</p>
-                <p className="hero-info-text">Presencial e teleconsulta</p>
+                <p className="hero-info-label">Foco</p>
+                <p className="hero-info-value">Autismo, TDAH e Epilepsia</p>
+                <p className="hero-info-text">Neurologia Infantil</p>
               </div>
             </div>
           </div>
@@ -446,7 +446,7 @@ function Hero() {
                 <p className="font-display text-2xl font-semibold text-brand-text">
                   Dra. Marina Keuffer
                 </p>
-                <p className="mt-2 text-base font-bold uppercase tracking-[0.28em] text-brand-text">
+                <p className="mt-1.5 text-sm font-bold uppercase tracking-[0.25em] text-brand-text/80">
                   Neuropediatra
                 </p>
               </div>
@@ -643,7 +643,7 @@ function About() {
                 A Dra. Marina Keuffer é médica formada pelo <strong className="font-semibold text-brand-text">Centro Universitário do Estado do Pará (CESUPA)</strong>, com trajetória voltada ao acompanhamento do desenvolvimento infantil.
               </p>
               <p>
-                Sua formação inclui <strong className="font-semibold text-brand-text">Pediatria pela Fundação Santa Casa de Misericórdia do Pará (FSCMPA)</strong> e especialização pela <strong className="font-semibold text-brand-text">UFCSPA / Santa Casa de Porto Alegre</strong>.
+                Sua formação inclui <strong className="font-semibold text-brand-text">Pediatria pela Fundação Santa Casa de Misericórdia do Pará (FSCMPA)</strong> e <strong className="font-semibold text-brand-text">Residência Médica em Neurologia Pediátrica</strong> pela <strong className="font-semibold text-brand-text">UFCSPA / Santa Casa de Porto Alegre</strong>.
               </p>
               <p>
                 Sua prática clínica prioriza <strong className="font-semibold text-brand-text">avaliação cuidadosa</strong>, <strong className="font-semibold text-brand-text">diagnóstico preciso</strong> e <strong className="font-semibold text-brand-text">orientação segura para as famílias</strong>.
@@ -906,8 +906,8 @@ function Footer() {
             <div>
               <p className="mb-4 text-sm font-bold uppercase tracking-widest text-brand-primary">Credenciais</p>
               <ul className="space-y-3 text-sm font-medium text-brand-text/75">
-                <li>Reg. CRM 57561-RS</li>
-                <li>RQE 44491</li>
+                <li>CRM 57561-RS | 15077-PA</li>
+                <li>RQE 44491-RS | 10788-PA</li>
               </ul>
             </div>
           </div>
