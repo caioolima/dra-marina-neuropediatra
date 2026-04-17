@@ -453,11 +453,11 @@ function Hero() {
                   priority
                 />
               </div>
-              <div className="absolute bottom-8 left-8 right-8 rounded-[1.7rem] border border-white/60 bg-white/84 p-5 shadow-[0_18px_40px_rgba(118,93,99,0.14)] backdrop-blur">
-                <p className="font-display text-2xl font-semibold text-brand-text">
+              <div className="absolute bottom-6 left-6 right-auto w-fit rounded-[1.5rem] border border-white/60 bg-white/84 px-5 py-4 shadow-[0_15px_35px_rgba(118,93,99,0.12)] backdrop-blur-md">
+                <p className="font-display text-lg font-bold text-brand-text md:text-xl">
                   Dra. Marina Keuffer
                 </p>
-                <p className="mt-1.5 text-sm font-bold uppercase tracking-[0.25em] text-brand-text/80">
+                <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-text/60">
                   Neuropediatra
                 </p>
               </div>
