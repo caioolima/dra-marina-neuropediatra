@@ -426,11 +426,16 @@ function Hero() {
 
               {/* Column 2: Focus */}
               <div className="flex flex-1 flex-col items-center justify-center text-center md:items-start md:text-left">
-                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco de Atuação</p>
-                <h3 className="mt-2 font-display text-lg font-bold leading-tight text-brand-text md:text-xl">
-                  Autismo, TDAH e Epilepsia
-                </h3>
-                <p className="mt-2 text-xs font-medium leading-relaxed text-brand-text/50 italic">
+                <p className="whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco de Atuação</p>
+                <ul className="mt-2 space-y-1.5">
+                  {['Autismo', 'TDAH', 'Epilepsia'].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm font-semibold text-brand-text md:text-base">
+                      <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-primary" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 text-xs font-medium text-brand-text/50 italic">
                   Neurologia Infantil e Neurodesenvolvimento
                 </p>
               </div>
