@@ -570,18 +570,19 @@ function Specialties() {
         <div className="grid gap-6 md:grid-cols-2 lg:gap-8 xl:gap-12">
           {specialties.map((item, index) => {
             const Illustration = item.Illustration;
-            const isEven = index % 2 === 0;
             return (
               <motion.article
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.65, delay: index * 0.1 }}
-                className={`group relative flex flex-col justify-between overflow-hidden rounded-[3rem] border-[6px] border-white ${item.tone} p-8 shadow-[0_20px_50px_rgba(118,93,99,0.08)] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_24px_50px_rgba(118,93,99,0.12)] md:p-10 ${isEven ? 'lg:-translate-y-8' : 'lg:translate-y-8'}`}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                className="group relative flex flex-col overflow-hidden rounded-[2.8rem] bg-[#faf7f2] p-8 transition-all duration-500 hover:bg-brand-primary/5 hover:shadow-2xl lg:p-10"
+                style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
               >
-                <div className="absolute right-[-10%] top-[-10%] opacity-20 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110">
-                   <div className="h-64 w-64 rounded-full bg-white blur-3xl" />
+                {/* Background Decoration - Optimized */}
+                <div className="absolute -right-8 -top-8 z-0 opacity-0 transition-opacity duration-700 group-hover:opacity-10">
+                  <div className="h-64 w-64 rounded-full bg-white blur-3xl" />
                 </div>
                 
                 <div className="relative z-10 mb-8 flex items-center justify-between">
