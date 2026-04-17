@@ -487,7 +487,7 @@ function Journey() {
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
               Como é o atendimento
             </span>
-            <h2 className="mt-8 mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-6xl lg:text-7xl">
+            <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
               Uma condução clínica cuidadosa do início ao acompanhamento.
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
@@ -629,7 +629,7 @@ function About() {
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
               Sobre a médica
             </span>
-            <h2 className="mt-8 mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-6xl lg:text-7xl">
+            <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
               Trajetória sólida no cuidado infantil.
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
@@ -695,7 +695,7 @@ function Testimonials() {
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
               Percepção das famílias
             </span>
-            <h2 className="mt-8 mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-6xl lg:text-7xl">
+            <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
               Confiança construída no atendimento.
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
