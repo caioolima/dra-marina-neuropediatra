@@ -349,7 +349,7 @@ function Hero() {
       <CloudCluster className="absolute left-[30%] -top-4 scale-50 opacity-80 md:left-10 md:top-8 md:scale-100 z-0" />
       <CloudCluster className="absolute right-12 top-10 hidden opacity-70 lg:block z-0" />
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-48 lg:pt-56">
-        <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="grid gap-16 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -360,7 +360,7 @@ function Hero() {
             Dra. Marina Keuffer
           </p>
 
-          <h1 className="max-w-2xl font-display text-4xl font-semibold leading-[1.02] text-brand-text md:text-6xl">
+          <h1 className="max-w-2xl font-display text-4xl font-bold leading-[1.02] text-brand-text md:text-5xl">
             Cuidado especializado para o desenvolvimento do seu filho.
           </h1>
 
