@@ -811,13 +811,13 @@ function Contact() {
               </div>
             </motion.div>
 
-            {/* Porto Alegre 2 Column (Prontokids) */}
+            {/* Porto Alegre 2 Column (ProntoKids) */}
             <motion.div {...fadeUp} className="lg:col-span-3">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-primary">
                 Porto Alegre - RS
               </span>
               <h3 className="mt-4 font-display text-2xl font-bold tracking-tight text-brand-text md:text-3xl">
-                Prontokids
+                ProntoKids
               </h3>
               <div className="mt-6 flex flex-col gap-2">
                 <p className="text-base leading-relaxed text-brand-text/70">
@@ -826,7 +826,7 @@ function Contact() {
                   Av. Dr. Nilo Peçanha, 3228
                 </p>
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Prontokids+Viva+Open+Mall+Av.+Dr.+Nilo+Peçanha+3228+Porto+Alegre" 
+                  href="https://www.google.com/maps/search/?api=1&query=ProntoKids+Viva+Open+Mall+Av.+Dr.+Nilo+Peçanha+3228+Porto+Alegre" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-primary hover:underline"
