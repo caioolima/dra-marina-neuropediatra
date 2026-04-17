@@ -584,23 +584,23 @@ function Specialties() {
                    <div className="h-64 w-64 rounded-full bg-white blur-3xl" />
                 </div>
                 
-                <div className="relative z-10 mb-10 flex items-center justify-between">
-                  <div className="flex h-24 w-24 items-center justify-center rounded-[2rem] bg-white/70 shadow-sm transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
-                    <Illustration className="h-16 w-16 drop-shadow-sm" />
+                <div className="relative z-10 mb-8 flex items-center justify-between">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-[1.7rem] bg-white/70 shadow-sm transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                    <Illustration className="h-12 w-12 drop-shadow-sm" />
                   </div>
-                  <span className="font-display text-7xl font-black text-white mix-blend-overlay opacity-80 transition-opacity group-hover:opacity-100">
+                  <span className="font-display text-5xl font-black text-white mix-blend-overlay opacity-80 transition-opacity group-hover:opacity-100">
                     0{index + 1}
                   </span>
                 </div>
                 
                 <div className="relative z-10">
-                  <span className="mb-4 inline-block rounded-2xl bg-white/60 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-brand-text/60 shadow-sm backdrop-blur-md">
+                  <span className="mb-3 inline-block rounded-xl bg-white/60 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-text/60 shadow-sm backdrop-blur-md">
                     {item.eyebrow}
                   </span>
-                  <h3 className="font-display text-3xl font-bold leading-tight text-brand-text md:text-4xl">
+                  <h3 className="font-display text-xl font-bold leading-tight text-brand-text md:text-2xl">
                     {item.title}
                   </h3>
-                  <p className="mt-5 text-lg font-medium leading-relaxed text-brand-text/70">
+                  <p className="mt-4 text-sm font-medium leading-relaxed text-brand-text/70">
                     {item.description}
                   </p>
                 </div>
@@ -655,7 +655,7 @@ function About() {
           </motion.div>
 
           <motion.div {...fadeUp}>
-            <div className="space-y-6 text-lg leading-8 text-brand-text/74">
+            <div className="space-y-6 text-base leading-8 text-brand-text/74">
               <p>
                 A Dra. Marina Keuffer é médica formada pelo <strong className="font-semibold text-brand-text">Centro Universitário do Estado do Pará (CESUPA)</strong>, com trajetória voltada ao acompanhamento do desenvolvimento infantil.
               </p>
