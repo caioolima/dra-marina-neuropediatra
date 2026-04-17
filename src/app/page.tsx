@@ -399,21 +399,44 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hero-credentials-card mt-12 -mx-5 w-[calc(100%+2.5rem)] md:mx-0 md:w-full max-w-3xl lg:max-w-none">
-            <div className="flex flex-col gap-10 rounded-none border-x-0 border-y border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md md:flex-row md:items-stretch md:justify-around md:gap-8 md:rounded-[2.4rem] md:border">
+          {/* Mobile: clean inline grid, no card background */}
+          <div className="mt-10 w-full md:hidden">
+            <div className="grid grid-cols-3 divide-x divide-brand-text/10 border-y border-brand-text/8 py-5">
+              <div className="flex flex-col items-center gap-1 px-2 text-center">
+                <p className="text-[9px] font-bold uppercase tracking-widest text-brand-primary/60">CRM</p>
+                <p className="text-xs font-bold text-brand-text">57561-RS</p>
+                <p className="text-xs font-bold text-brand-text">15077-PA</p>
+                <p className="mt-0.5 text-[9px] text-brand-text/40 italic">Reg. profissional</p>
+              </div>
+              <div className="flex flex-col items-center gap-1 px-2 text-center">
+                <p className="text-[9px] font-bold uppercase tracking-widest text-brand-primary/60">RQE</p>
+                <p className="text-xs font-bold text-brand-text">44491-RS</p>
+                <p className="text-xs font-bold text-brand-text">10788-PA</p>
+                <p className="mt-0.5 text-[9px] text-brand-text/40 italic">Especialista</p>
+              </div>
+              <div className="flex flex-col items-center gap-1 px-2 text-center">
+                <p className="text-[9px] font-bold uppercase tracking-widest text-brand-primary/60">Foco</p>
+                <p className="text-xs font-bold text-brand-text">Autismo</p>
+                <p className="text-xs font-bold text-brand-text">TDAH</p>
+                <p className="text-xs font-bold text-brand-text">Epilepsia</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: premium two-column card */}
+          <div className="hero-credentials-card mt-12 hidden w-full max-w-3xl md:block lg:max-w-none">
+            <div className="flex flex-row items-stretch justify-around gap-8 rounded-[2.4rem] border border-white/60 bg-white/45 p-8 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-md">
               {/* Column 1: Credentials */}
               <div className="flex flex-1 flex-col justify-center gap-8">
-                <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="flex flex-col items-start text-left">
                   <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">CRM</p>
                   <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
                     57561-RS <span className="mx-1 opacity-20">|</span> 15077-PA
                   </p>
                   <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Registro profissional</p>
                 </div>
-
-                <div className="h-px w-full bg-brand-text/5 md:w-3/4" />
-
-                <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="h-px w-3/4 bg-brand-text/5" />
+                <div className="flex flex-col items-start text-left">
                   <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">RQE</p>
                   <p className="whitespace-nowrap text-lg font-bold leading-tight text-brand-text lg:text-xl">
                     44491-RS <span className="mx-1 opacity-20">|</span> 10788-PA
@@ -421,11 +444,9 @@ function Hero() {
                   <p className="mt-1 text-xs font-medium text-brand-text/50 lowercase italic">Título de especialista</p>
                 </div>
               </div>
-              
-              <div className="hidden w-px bg-brand-text/10 md:block" />
-
+              <div className="w-px bg-brand-text/10" />
               {/* Column 2: Focus */}
-              <div className="flex flex-1 flex-col items-center justify-center text-center md:items-start md:text-left">
+              <div className="flex flex-1 flex-col items-start justify-center text-left">
                 <p className="whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco de Atuação</p>
                 <ul className="mt-2 space-y-1.5">
                   {['Autismo', 'TDAH', 'Epilepsia'].map((item) => (
