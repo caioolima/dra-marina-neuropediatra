@@ -943,7 +943,7 @@ function Footer() {
               Dra. Marina Keuffer
             </p>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-brand-text/60">
-              Neuropediatria
+              Neuropediatra
             </p>
           </div>
 

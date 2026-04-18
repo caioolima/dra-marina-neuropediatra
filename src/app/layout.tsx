@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Dra. Marina Keuffer | Neuropediatra",
     description: "Cuidado especializado no neurodesenvolvimento infantil em Porto Alegre e Belém.",
     url: "https://dra-marina-neuropediatra.vercel.app",
-    siteName: "Dra. Marina Keuffer Neuropediatria",
+    siteName: "Dra. Marina Keuffer Neuropediatra",
     images: [
       {
         url: "/marina-keuffer-sobre.jpeg",
