@@ -319,7 +319,7 @@ function Navbar() {
           </div>
         </a>
 
-        <div className="hidden items-center gap-7 text-sm font-medium text-brand-text/70 lg:flex">
+        <div className="hidden items-center gap-7 text-base font-semibold text-brand-text/80 lg:flex">
           <a href="#especialidades" className="nav-link">
             Especialidades
           </a>
@@ -333,7 +333,7 @@ function Navbar() {
 
         <a
           href={whatsappHref}
-          className="button-pop rounded-full bg-brand-primary px-5 py-3 text-sm font-bold text-white shadow-[0_16px_30px_rgba(245,185,191,0.35)]"
+          className="button-pop rounded-full bg-brand-primary px-5 py-3 text-sm font-bold text-white shadow-[0_16px_30px_rgba(201,77,106,0.25)]"
         >
           Agendar
         </a>
@@ -371,7 +371,7 @@ function Hero() {
           <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center">
             <a
               href={whatsappHref}
-              className="group relative inline-flex items-center justify-center gap-4 rounded-full bg-brand-primary p-2 pr-8 text-base font-bold text-white shadow-[0_18px_35px_rgba(245,185,191,0.4)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(245,185,191,0.5)]"
+              className="group relative inline-flex items-center justify-center gap-4 rounded-full bg-brand-primary p-2 pr-8 text-base font-bold text-white shadow-[0_18px_35px_rgba(201,77,106,0.3)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(201,77,106,0.38)]"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/20 text-white shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
                 <ArrowRight className="h-5 w-5" />
@@ -474,7 +474,7 @@ function Hero() {
             <div className="orb-float absolute -left-5 top-10 h-16 w-16 rounded-full bg-brand-butter/80 blur-sm" />
             <div className="orb-float-delayed absolute -right-4 bottom-14 h-20 w-20 rounded-full bg-brand-lilac/30 blur-sm" />
             <div className="interactive-card group relative overflow-hidden rounded-[2.4rem] bg-brand-cloud/80 p-3">
-              <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(245,185,191,0.35),transparent_70%)]" />
+              <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(201,77,106,0.25),transparent_70%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(118,93,99,0.08))]" />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/80">
                 <Image
@@ -510,7 +510,7 @@ function Journey() {
         {/* Journey Header */}
         <div className="mb-20 flex flex-col items-center text-center">
           <motion.div {...fadeUp}>
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
+            <span className="text-base font-bold uppercase tracking-[0.3em] text-brand-primary">
               Como é o atendimento
             </span>
             <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
@@ -548,7 +548,7 @@ function Journey() {
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <span className="font-display text-4xl font-black text-brand-primary/30 transition-colors group-hover:text-brand-primary/50">
+                    <span className="font-display text-5xl font-black text-brand-primary transition-colors group-hover:text-brand-primary/80">
                       0{index + 1}
                     </span>
                     <h3 className="text-2xl font-bold tracking-tight text-brand-text">
@@ -579,7 +579,7 @@ function Specialties() {
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-20 flex flex-col items-center text-center">
           <motion.div {...fadeUp}>
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
+            <span className="text-base font-bold uppercase tracking-[0.3em] text-brand-primary">
               Especialidades
             </span>
             <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
@@ -654,7 +654,7 @@ function About() {
         {/* About Header (Unified) */}
         <div className="mb-20 flex flex-col items-center text-center">
           <motion.div {...fadeUp}>
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
+            <span className="text-base font-bold uppercase tracking-[0.3em] text-brand-primary">
               Sobre a médica
             </span>
             <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
@@ -670,7 +670,7 @@ function About() {
 
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <motion.div {...fadeUp} className="interactive-card rounded-[2.8rem] bg-white p-5 shadow-[0_24px_55px_rgba(213,160,223,0.16)]">
-            <div className="rounded-[2.2rem] bg-[linear-gradient(180deg,rgba(165,213,221,0.22),rgba(245,185,191,0.22))] p-4">
+            <div className="rounded-[2.2rem] bg-[linear-gradient(180deg,rgba(165,213,221,0.22),rgba(201,77,106,0.15))] p-4">
               <div className="group relative aspect-[4/5] overflow-hidden rounded-[2rem]">
                 <Image
                   src="/marina-keuffer-sobre.jpeg"
@@ -720,7 +720,7 @@ function Testimonials() {
         {/* Testimonials Header (Unified) */}
         <div className="mb-20 flex flex-col items-center text-center">
           <motion.div {...fadeUp}>
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-primary/60">
+            <span className="text-base font-bold uppercase tracking-[0.3em] text-brand-primary">
               Percepção das famílias
             </span>
             <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
@@ -793,7 +793,7 @@ function Contact() {
                   <span className="relative z-10">Agendar consulta por WhatsApp</span>
                   <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
-                <p className="mt-4 text-xs font-medium uppercase tracking-widest text-white/40">
+                <p className="mt-4 text-xs font-medium uppercase tracking-widest text-white/80">
                   Resposta rápida via WhatsApp
                 </p>
               </div>
@@ -968,8 +968,8 @@ function Footer() {
 
         <div className="mt-8 flex flex-col items-center justify-between gap-4 text-sm font-medium text-brand-text/60 md:flex-row">
           <p>© {new Date().getFullYear()} Dra. Marina Keuffer. Todos os direitos reservados.</p>
-          <div className="flex items-center gap-1.5 opacity-60 transition-opacity hover:opacity-100">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-brand-text/30">Powered by</span>
+          <div className="flex items-center gap-1.5 transition-opacity hover:opacity-80">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-text/60">Powered by</span>
             <a 
               href="https://beecode.com.br" 
               target="_blank" 
