@@ -41,7 +41,7 @@ const journeyItems = [
     icon: Brain,
     title: 'Avaliação precisa',
     description:
-      'Investigação clínica criteriosa para apoiar diagnóstico e conduta com segurança.',
+      'Investigação clínica cuidadosa para apoiar diagnóstico e conduta com segurança.',
   },
   {
     icon: ShieldCheck,
@@ -136,15 +136,15 @@ const specialties = [
     eyebrow: 'Avaliação',
     title: 'Autismo e sinais do espectro',
     description:
-      'Avaliação clínica criteriosa para compreender sinais, comportamento e comunicação.',
+      'Avaliação clínica cuidadosa para compreender sinais, comportamento e comunicação.',
     tone: 'bg-brand-lilac/25',
     Illustration: TeddyGraphic,
   },
   {
     eyebrow: 'Neurologia clínica',
-    title: 'Epilepsia e crises',
+    title: 'Epilepsias',
     description:
-      'Diagnóstico de crises convulsivas e manejo clínico individualizado de síndromes epiléticas.',
+      'Diagnóstico de crises convulsivas e manejo clínico individualizado de síndromes epilépticas.',
     tone: 'bg-brand-secondary/35',
     Illustration: PinwheelGraphic,
   },
@@ -417,7 +417,7 @@ function Hero() {
                 <p className="text-[9px] font-bold uppercase tracking-widest text-brand-primary/60">Foco</p>
                 <p className="text-xs font-bold text-brand-text">Autismo</p>
                 <p className="text-xs font-bold text-brand-text">TDAH</p>
-                <p className="text-xs font-bold text-brand-text">Epilepsia</p>
+                <p className="text-xs font-bold text-brand-text">Epilepsias</p>
               </div>
             </div>
           </div>
@@ -448,7 +448,7 @@ function Hero() {
               <div className="flex flex-1 flex-col items-start justify-center text-left">
                 <p className="whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.25em] text-brand-primary/60">Foco de Atuação</p>
                 <ul className="mt-2 space-y-1.5">
-                  {['Autismo', 'TDAH', 'Epilepsia'].map((item) => (
+                  {['Autismo', 'TDAH', 'Epilepsias'].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm font-semibold text-brand-text md:text-base">
                       <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-primary" />
                       {item}
@@ -518,7 +518,7 @@ function Journey() {
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
               <p className="border-t border-brand-text/10 pt-8 text-lg font-medium leading-relaxed text-brand-text/60 md:text-xl">
-                Clareza para a família, investigação criteriosa e definição segura dos próximos passos.
+                Clareza para a família, investigação cuidadosa e definição segura dos próximos passos.
               </p>
             </div>
           </motion.div>
@@ -587,7 +587,7 @@ function Specialties() {
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
               <p className="border-t border-brand-text/10 pt-8 text-base font-medium leading-relaxed text-brand-text/60">
-                Uma investigação criteriosa para entender sinais, orientar a família e definir os próximos passos com segurança.
+                Uma investigação cuidadosa para entender sinais, orientar a família e definir os próximos passos com segurança.
               </p>
             </div>
           </motion.div>
@@ -662,7 +662,7 @@ function About() {
             </h2>
             <div className="mt-10 mx-auto max-w-2xl">
               <p className="border-t border-brand-text/10 pt-8 text-lg font-medium leading-relaxed text-brand-text/60 md:text-xl">
-                Uma formação criteriosa e uma prática clínica pautada no acolhimento e na evidência científica.
+                Uma formação cuidadosa e uma prática clínica pautada no acolhimento e na evidência científica.
               </p>
             </div>
           </motion.div>
