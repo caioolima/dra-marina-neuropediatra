@@ -298,14 +298,14 @@ function RattleAccent({ className = '' }: { className?: string }) {
 function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
         <a href="#inicio" className="group flex items-center">
-          <div className="relative h-10 w-24 transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-32">
+          <div className="relative h-10 w-28 transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-32">
             <Image
               src="/logo.png"
               alt="Dra. Marina Keuffer - Neuropediatra"
               fill
-              className="object-contain scale-[1.8]"
+              className="object-contain scale-[1.5] origin-left"
               sizes="(max-width: 768px) 160px, 200px"
               loading="eager"
               priority
@@ -655,7 +655,7 @@ function About() {
         <div className="mb-20 flex flex-col items-center text-center">
           <motion.div {...fadeUp}>
             <span className="text-base font-bold uppercase tracking-[0.3em] text-brand-primary">
-              Sobre a médica
+              Sobre a Marina
             </span>
             <h2 className="mt-8 mx-auto max-w-4xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-text md:text-4xl lg:text-5xl">
               Trajetória sólida no cuidado infantil.
