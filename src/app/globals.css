@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,9 +10,6 @@
   --color-brand-sage: #d7e6ad;
   --color-brand-cloud: #f5eee4;
   --color-brand-text: #765d63;
-
-  --font-sans: var(--font-inter), sans-serif;
-  --font-display: var(--font-outfit), sans-serif;
 }
 
 @layer base {
@@ -24,7 +22,14 @@
   }
 
   body {
+    font-family: 'Poppins', sans-serif;
     @apply bg-white text-brand-text antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: -0.04em;
   }
 
   a {
@@ -62,11 +67,6 @@
   .interactive-card {
     position: relative;
     overflow: hidden;
-    transition:
-      transform 260ms ease,
-      box-shadow 260ms ease,
-      border-color 260ms ease,
-      background-color 260ms ease;
   }
 
   .interactive-card::before {
@@ -77,12 +77,6 @@
     opacity: 0;
     transition: opacity 260ms ease;
     pointer-events: none;
-  }
-
-  .interactive-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 22px 48px rgba(118, 93, 99, 0.12);
-    border-color: var(--color-brand-primary);
   }
 
   .interactive-card:hover::before {
@@ -484,10 +478,35 @@
     height: 56px;
     border-radius: 999px;
   }
+}
 
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: #fffdfd;
+  }
+
+  body {
+    font-family: 'Fredoka', sans-serif;
+    @apply bg-white text-brand-text antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Fredoka', sans-serif !important;
+    font-weight: 600;
+  }
+
+  a {
+    @apply outline-none;
+  }
+}
+
+@layer components {
   .testimonial-card {
     position: relative;
-    transition: transform 260ms ease, box-shadow 260ms ease;
   }
 
   .testimonial-card::after {

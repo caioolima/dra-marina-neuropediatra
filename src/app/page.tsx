@@ -1,7 +1,8 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import {
   ArrowRight,
   Brain,
@@ -36,18 +37,21 @@ const journeyItems = [
     title: 'Escuta qualificada',
     description:
       'Consulta conduzida com atenção ao histórico, comportamento e desenvolvimento da criança.',
+    tone: 'bg-brand-secondary/25',
   },
   {
     icon: Brain,
     title: 'Avaliação precisa',
     description:
       'Investigação clínica cuidadosa para apoiar diagnóstico e conduta com segurança.',
+    tone: 'bg-brand-lilac/25',
   },
   {
     icon: ShieldCheck,
     title: 'Orientação objetiva',
     description:
       'Direcionamento claro para os próximos passos, sempre alinhado às necessidades da família.',
+    tone: 'bg-brand-butter/25',
   },
 ];
 
@@ -172,13 +176,19 @@ const testimonials = [
   },
 ];
 
-function CloudCluster({ className = '' }: { className?: string }) {
+function CloudCluster({ className = '', style }: { className?: string; style?: any }) {
   return (
-    <div className={`cloud-cluster ${className}`} aria-hidden="true">
+    <motion.div 
+      className={`cloud-cluster ${className}`} 
+      aria-hidden="true"
+      whileHover={{ scale: 1.1, x: 5, y: -5 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      style={style}
+    >
       <span className="cloud cloud-a" />
       <span className="cloud cloud-b" />
       <span className="cloud cloud-c" />
-    </div>
+    </motion.div>
   );
 }
 
@@ -225,12 +235,21 @@ function StarAccent({ className = '', glowColor = 'bg-brand-butter/40', textColo
   );
 }
 
-function SunAccent({ className = '' }: { className?: string }) {
+function SunAccent({ className = '', style }: { className?: string; style?: any }) {
   return (
-    <div className={`absolute flex h-40 w-40 items-center justify-center ${className}`} aria-hidden="true">
+    <motion.div 
+      className={`absolute flex h-40 w-40 items-center justify-center ${className}`} 
+      aria-hidden="true"
+      whileHover={{ scale: 1.1, rotate: 15 }}
+      transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+      style={style}
+    >
       <div className="absolute inset-0 animate-pulse rounded-full bg-brand-butter/50 blur-3xl" />
-      <div className="relative h-28 w-28 rounded-full bg-gradient-to-br from-[#fffdf5] to-[#f8d989] shadow-[0_0_60px_rgba(248,217,137,0.7)]" />
-    </div>
+      <motion.div 
+        className="relative h-28 w-28 rounded-full bg-gradient-to-br from-[#fffdf5] to-[#f8d989] shadow-[0_0_60px_rgba(248,217,137,0.7)]" 
+        whileHover={{ boxShadow: '0 0 80px rgba(248,217,137,0.9)' }}
+      />
+    </motion.div>
   );
 }
 
@@ -296,11 +315,29 @@ function RattleAccent({ className = '' }: { className?: string }) {
 }
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
+    <nav 
+      className={`sticky top-0 z-[100] border-b border-white/60 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-white/95 py-3 shadow-[0_10px_30px_rgba(118,93,99,0.08)] backdrop-blur-xl' 
+          : 'bg-white/80 py-4 backdrop-blur-xl'
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
         <a href="#inicio" className="group flex items-center">
-          <div className="relative h-10 w-28 transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-32">
+          <div className={`relative transition-all duration-500 ${
+            scrolled ? 'h-9 w-28 md:h-11 md:w-30' : 'h-10 w-28 md:h-12 md:w-32'
+          }`}>
             <Image
               src="/logo.png"
               alt="Dra. Marina Keuffer - Neuropediatra"
@@ -327,7 +364,9 @@ function Navbar() {
 
         <a
           href={whatsappHref}
-          className="btn-shine-container button-pop flex items-center gap-2 rounded-full bg-brand-name px-6 py-3 text-sm font-bold text-white shadow-[0_12px_24px_rgba(249, 164, 170, 0.3)] transition-all hover:scale-105 active:scale-95"
+          className={`btn-shine-container button-pop flex items-center gap-2 rounded-full bg-brand-name text-white shadow-[0_12px_24px_rgba(249,164,170,0.3)] transition-all ${
+            scrolled ? 'px-5 py-2 text-sm' : 'px-6 py-3 text-sm'
+          }`}
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -340,13 +379,27 @@ function Navbar() {
 }
 
 function Hero() {
+  const { scrollY } = useScroll();
+  const sunY = useTransform(scrollY, [0, 500], [0, 150]);
+  const cloudsY = useTransform(scrollY, [0, 500], [0, 80]);
+  const cloudsX = useTransform(scrollY, [0, 500], [0, 30]);
+
   return (
     <header id="inicio" className="relative overflow-hidden bg-[linear-gradient(180deg,#d4eff4_0%,#ffffff_45%)]">
-      <SunAccent className="absolute -left-12 -top-12 scale-75 opacity-95 transition-transform duration-[10000ms] hover:scale-90 md:left-[5%] md:top-0 md:scale-100 z-0" />
-      <CloudCluster className="absolute left-[30%] -top-4 scale-50 opacity-80 md:left-10 md:top-8 md:scale-100 z-0" />
-      <CloudCluster className="absolute right-12 top-10 hidden opacity-70 lg:block z-0" />
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-48 lg:pt-56">
-        <div className="grid gap-16 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+      <SunAccent 
+        className="absolute -left-12 -top-12 scale-75 opacity-95 md:left-[5%] md:top-0 md:scale-100 z-0 cursor-pointer" 
+        style={{ y: sunY }}
+      />
+      <CloudCluster 
+        className="absolute left-[30%] -top-4 scale-50 opacity-80 md:left-10 md:top-8 md:scale-100 z-0 cursor-pointer" 
+        style={{ y: cloudsY, x: cloudsX }}
+      />
+      <CloudCluster 
+        className="absolute right-12 top-10 hidden opacity-70 lg:block z-0 cursor-pointer" 
+        style={{ y: cloudsY, x: useTransform(scrollY, [0, 500], [0, -30]) }}
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-20 md:px-8 md:pb-32 md:pt-24 lg:pt-28">
+        <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -357,11 +410,11 @@ function Hero() {
             Dra. Marina Keuffer
           </p>
 
-          <h1 className="max-w-2xl font-display text-3xl font-bold leading-[1.08] text-brand-text md:text-4xl lg:text-5xl">
+          <h1 className="max-w-4xl font-display text-3xl font-bold leading-[1.08] text-brand-text md:text-4xl lg:text-[2.65rem]">
             Cuidado especializado para o desenvolvimento do seu filho.
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-7 text-brand-text/72 md:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-brand-text/72 md:text-lg">
             Consulta em neuropediatria para famílias que buscam <strong className="font-semibold text-brand-text">avaliação especializada</strong>, <strong className="font-semibold text-brand-text">diagnóstico preciso</strong> e <strong className="font-semibold text-brand-text">orientação segura</strong>.
           </p>
 
@@ -533,22 +586,28 @@ function Journey() {
                 key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.65, delay: index * 0.15 }}
-                className="group relative rounded-[2.5rem] border border-white/60 bg-white/40 p-10 shadow-[0_20px_45px_rgba(118,93,99,0.04)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:bg-white hover:shadow-[0_24px_55px_rgba(118,93,99,0.08)]"
+                className={`group relative overflow-hidden rounded-[3rem] border-4 border-white ${item.tone} p-10 shadow-[0_20px_45px_rgba(118,93,99,0.06)] backdrop-blur-sm`}
               >
+                {/* Background Decoration */}
+                <div className="absolute right-[-10%] top-[-10%] z-0 opacity-20 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110">
+                  <div className="h-40 w-40 rounded-full bg-white blur-2xl" />
+                </div>
+
                 {/* Step Connector (only on large screens) */}
                 {index < 2 && (
                   <div className="absolute right-[-2.5rem] top-1/2 hidden h-[1px] w-20 bg-brand-text/10 lg:block opacity-40" />
                 )}
                 
-                <div className="flex flex-col">
-                  <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-primary/5 text-brand-primary transition-all duration-500 group-hover:bg-brand-primary group-hover:text-white">
+                <div className="relative z-10 flex flex-col">
+                  <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/70 text-brand-primary shadow-sm transition-all duration-500 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 group-hover:-rotate-3">
                     <Icon className="h-7 w-7" />
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <span className="font-display text-5xl font-black text-brand-primary transition-colors group-hover:text-brand-primary/80">
+                    <span className="font-display text-5xl font-black text-brand-primary mix-blend-multiply opacity-50 transition-colors group-hover:opacity-100">
                       0{index + 1}
                     </span>
                     <h3 className="text-2xl font-bold tracking-tight text-brand-text">
@@ -556,7 +615,7 @@ function Journey() {
                     </h3>
                   </div>
 
-                  <p className="mt-6 text-base font-medium leading-relaxed text-brand-text/60">
+                  <p className="mt-6 text-base font-medium leading-relaxed text-brand-text/70">
                     {item.description}
                   </p>
                 </div>
@@ -602,9 +661,10 @@ function Specialties() {
                 key={item.title}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                whileHover={{ y: isEven ? -40 : 24, transition: { duration: 0.3 } }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-                className={`group relative flex flex-col justify-between overflow-hidden rounded-[3rem] border-[6px] border-white ${item.tone} p-8 shadow-[0_20px_50px_rgba(118,93,99,0.08)] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_24px_50px_rgba(118,93,99,0.12)] md:p-10 ${isEven ? 'lg:-translate-y-8' : 'lg:translate-y-8'}`}
+                className={`group relative flex flex-col justify-between overflow-hidden rounded-[3rem] border-[6px] border-white ${item.tone} p-8 shadow-[0_20px_50px_rgba(118,93,99,0.08)] md:p-10 ${isEven ? 'lg:-translate-y-8' : 'lg:translate-y-8'}`}
                 style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
               >
                 {/* Background Decoration - Optimized */}
@@ -738,10 +798,9 @@ function Testimonials() {
           {testimonials.map((item, index) => (
             <motion.article
               key={item.name}
-              variants={cardVariants}
-              initial="initial"
-              whileInView="whileInView"
-              whileHover={{ y: -10 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.55, delay: index * 0.08 }}
               className="testimonial-card rounded-[2rem] bg-white p-6 shadow-[0_16px_40px_rgba(118,93,99,0.08)]"
@@ -1012,7 +1071,7 @@ function WhatsAppFloatingButton() {
 
 export default function Page() {
   return (
-    <main className="overflow-x-hidden bg-[linear-gradient(180deg,#fffdfd_0%,#fff7f8_18%,#fbffff_48%,#fffefb_100%)] text-brand-text selection:bg-brand-primary selection:text-white">
+    <main className="bg-[linear-gradient(180deg,#fffdfd_0%,#fff7f8_18%,#fbffff_48%,#fffefb_100%)] text-brand-text selection:bg-brand-primary selection:text-white">
       <Navbar />
       <Hero />
       <Journey />
